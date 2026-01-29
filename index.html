@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Fidalgo Saeta</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="top-of-page">
+    <button id="language-toggle" class="language-toggle">ES</button>
+    <header>
+        <a href="#top-of-page">
+            <h1>Javier Fidalgo Saeta</h1>
+        </a>
+        <h4 data-key="headerSubtitle">Arquitecto / Especialista BIM / Diseñador computacional</h4>
+        <p data-key="headerDescription">Apasionado del buen diseño y la ejecución eficiente mediante el empleo de metodologías y herramientas innovadoras.</p>
+        <nav>
+            <a class="anchor-text" href="#about">
+                <span class="line"></span>
+                <span class="text" data-key="navAbout">Sobre mí</span>
+            </a>
+            <a class="anchor-text" href="#experience">
+                <span class="line"></span>
+                <span class="text" data-key="navExperience">Experiencia</span>
+            </a>
+            <a class="anchor-text" href="#education">
+                <span class="line"></span>
+                <span class="text" data-key="navEducation">Educación</span>
+            </a>
+            <a class="anchor-text" href="#projects">
+                <span class="line"></span>
+                <span class="text" data-key="navProjects">Proyectos</span>
+            </a>
+        </nav>
+        <div class="social-links-container">
+            <a class="social-link" href="https://www.linkedin.com/in/jafisa/" target="_blank">
+                <svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(3.795713,0,0,3.795713,-214.628314,-214.628314)"><path d="M512,96L127.9,96C110.3,96 96,110.5 96,128.3L96,511.7C96,529.5 110.3,544 127.9,544L512,544C529.6,544 544,529.5 544,511.7L544,128.3C544,110.5 529.6,96 512,96ZM231.5,480L165,480L165,266.2L231.5,266.2L231.5,480ZM198.2,160C219.5,160 236.7,177.2 236.7,198.5C236.7,219.8 219.5,237 198.2,237C176.9,237 159.7,219.8 159.7,198.5C159.7,177.2 176.9,160 198.2,160ZM480.3,480L413.9,480L413.9,376C413.9,351.2 413.4,319.3 379.4,319.3C344.8,319.3 339.5,346.3 339.5,374.2L339.5,480L273.1,480L273.1,266.2L336.8,266.2L336.8,295.4L337.7,295.4C346.6,278.6 368.3,260.9 400.6,260.9C467.8,260.9 480.3,305.2 480.3,362.8L480.3,480Z" style="fill-rule:nonzero;"/></g></svg>
+            </a>
+            <a class="social-link" href="https://github.com/javi-arch" target="_blank">
+                <svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(3.830616,0,0,3.830616,-225.797008,-225.797008)"><path d="M316.8,72C178.1,72 72,177.3 72,316C72,426.9 141.8,521.8 241.5,555.2C254.3,557.5 258.8,549.6 258.8,543.1C258.8,536.9 258.5,502.7 258.5,481.7C258.5,481.7 188.5,496.7 173.8,451.9C173.8,451.9 162.4,422.8 146,415.3C146,415.3 123.1,399.6 147.6,399.9C147.6,399.9 172.5,401.9 186.2,425.7C208.1,464.3 244.8,453.2 259.1,446.6C261.4,430.6 267.9,419.5 275.1,412.9C219.2,406.7 162.8,398.6 162.8,302.4C162.8,274.9 170.4,261.1 186.4,243.5C183.8,237 175.3,210.2 189,175.6C209.9,169.1 258,202.6 258,202.6C278,197 299.5,194.1 320.8,194.1C342.1,194.1 363.6,197 383.6,202.6C383.6,202.6 431.7,169 452.6,175.6C466.3,210.3 457.8,237 455.2,243.5C471.2,261.2 481,275 481,302.4C481,398.9 422.1,406.6 366.2,412.9C375.4,420.8 383.2,435.8 383.2,459.3C383.2,493 382.9,534.7 382.9,542.9C382.9,549.4 387.5,557.3 400.2,555C500.2,521.8 568,426.9 568,316C568,177.3 455.5,72 316.8,72Z" style="fill-rule:nonzero;"/></g></svg>
+            </a>
+            <a class="social-link" href="https://sketchfab.com/javifs37goo" target="_blank">
+                <svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(0.949993,0,0,0.949993,50.007319,50.007319)"><path d="M1000,0C447.68,0 0,447.72 0,1000C0,1552.28 447.68,2000 1000,2000C1552.32,2000 2000,1552.28 2000,1000C2000,447.72 1552.4,0 1000,0ZM913.12,1595.07L482,1346.21L482,844.21L913.12,1077L913.12,1595.07ZM989.92,958.88L479.84,688.5L989.92,394L1500.08,688.5L989.92,958.88ZM1500.4,1347.17L1070.88,1595.17L1070.88,1079L1500.4,847L1500.4,1347.17Z" style="fill-rule:nonzero;"/></g></svg>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/@javierfidalgosaeta" target="_blank">
+                <svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(3.661662,0,0,3.661662,-172.098133,-171.731966)"><path d="M581.7,188.1L581.8,188.1C593.2,231 593.2,320.4 593.2,320.4C593.2,320.4 593.2,409.8 581.8,452.7C575.5,476.3 557,494.2 533.5,500.5C490.9,512 320.1,512 320.1,512C320.1,512 149.3,512 106.7,500.5C83.2,494.2 64.7,476.3 58.4,452.7C47,409.8 47,320.4 47,320.4C47,320.4 47,231 58.4,188.1C64.7,164.4 83.2,145.8 106.7,139.5C149.3,128 320.1,128 320.1,128C320.1,128 490.9,128 533.4,139.5C556.9,145.8 575.5,164.4 581.7,188.1ZM253.75,417.358L424.846,320L253.75,222.642L253.75,417.358Z"/></g></svg>
+            </a>
+        </div>
+        <p class="mail">javier.fidalgo.saeta@gmail.com</p>
+    </header>
+    <main>
+        <section id="about">
+            <div class="sticky-header">
+                <h2 data-key="aboutTitle">Sobre mí</h2>
+            </div>
+            <div class="about-contents">
+                <p data-key="aboutPara1">
+                    Soy un arquitecto basado en Madrid con un fuerte interés en la intersección entre diseño y tecnología. Estoy especializado en el desarrollo de proyectos de edificación en entornos BIM, aprovechando al máximo las capacidades de <a target="_blank" class="anchor-text" href="https://www.autodesk.com/es/products/revit/">Autodesk Revit</a> y <a target="_blank" class="anchor-text" href="https://www.rhino3d.com/">Rhinoceros 3D</a>. No obstante, cuando estos programas se quedan cortos a la hora de abordar flujos de trabajo específicos, soy capaz de desarrollar mis propias herramientas mediante programación gráfica (Revit-<a target="_blank" class="anchor-text" href="https://dynamobim.org/">Dynamo</a>, Rhino-<a target="_blank" class="anchor-text" href="https://www.grasshopper3d.com/">Grasshopper</a>) o scripting (<a target="_blank" class="anchor-text" href="https://pyrevitlabs.notion.site/">PyRevit</a>, C# + Revit/Rhino).
+                </p>
+                <p data-key="aboutPara2">
+                    Actualmente, trabajo como Arquitecto BIM en la Gerencia de Ingeniería y Edificación de Tragsatec, <a target="_blank" class="anchor-text" href="https://www.tragsa.es/">Grupo Tragsa</a>, donde contribuyo al desarrollo de proyectos de diversa tipología y escala para la administración pública, desde la fase conceptual hasta su ejecución, con un papel destacado junto al BIM Manager, modelando y coordinando disciplinas.
+                </p>
+                <p data-key="aboutPara3">
+                    En el pasado, he tenido la oportunidad de trabajar en proyectos únicos de arquitectura y urbanismo con los que he podido profundizar en temas relevantes como el diseño sostenible basado en datos, la prefabricación y fabricación digital, y la materialización constructiva de diseños geométricamente complejos.
+                </p>
+                <p data-key="aboutPara4">
+                    En mi tiempo libre me gusta aplicar mis habilidades en pequeños proyectos personales, además de pasar tiempo con mis seres <a target="_blank" class="anchor-text-secret" href="public/img-secret-cris.jpg">queridos</a>, aprender sobre historia, y desconectar en la pista de pádel.
+                </p>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="sticky-header">
+                <h2 data-key="experienceTitle">Experiencia</h2>
+            </div>
+            <div class="contents">
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="expTragsaTenure">2024 — actualidad</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.tragsa.es/">
+                            <h3 class="anchor-text card-header" data-key="expTragsaTitle">
+                                Arquitecto BIM · Grupo  
+                                <span class="no-break">Tragsa <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="expTragsaDesc">
+                            Modelado, coordinación de disciplinas y desarrollo de herramientas en diversos proyectos de arquitectura con metodología BIM para la Administración pública, desde fases conceptuales hasta el proyecto de ejecución, incluso apoyo en fase de obra. Especialización en edificación de nueva planta para bases de bomberos forestales, así como en proyectos de rehabilitación de oficinas administrativas.
+                        </p>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Revit</p>
+                            </div>
+                            <div class="tag">
+                                <p>Dynamo</p>
+                            </div>
+                            <div class="tag">
+                                <p>PyRevit</p>
+                            </div>
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>Grasshopper</p>
+                            </div>
+                            <div class="tag">
+                                <p>Python</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="expLabitTenure">2023 — 2024</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://labit.es/">
+                            <h3 class="anchor-text card-header" data-key="expLabitTitle">
+                                Arquitecto BIM Junior · Labit 
+                                <span class="no-break">Group <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="expLabitDesc">
+                            Participación en diversos proyectos singulares de arquitectura y urbanismo en entornos BIM, especialmente en fases iniciales de diseño para grandes desarrollos en Oriente Medio. Análisis y diseño mediante datos. Modelado de geometrías complejas mediante métodos paramétricos y SubD.
+                        </p>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Revit</p>
+                            </div>
+                            <div class="tag">
+                                <p>Dynamo</p>
+                            </div>
+                            <div class="tag">
+                                <p>PyRevit</p>
+                            </div>
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>SubD</p>
+                            </div>
+                            <div class="tag">
+                                <p>Grasshopper</p>
+                            </div>
+                            <div class="tag">
+                                <p>Python</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="expLabTenure">2019 — 2021</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.linkedin.com/company/the-lab-r-a-martigar-arquitectos/">
+                            <h3 class="anchor-text card-header" data-key="expLabTitle">
+                                Arquitecto en prácticas · The 
+                                <span class="no-break">Lab <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="expLabDesc">
+                            Prácticas en el estudio del profesor <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/enrique-mart%C3%ADnez-sierra-bba0063b/">Enrique Martínez Sierra</a>, especializado en patrimonio construido y estructuras. Participación en proyectos de rehabilitación en conjuntos históricos y residenciales. Elaboración de presupuestos, inspecciones técnicas de edificios (ITE) e informes periciales.
+                        </p>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>AutoCAD</p>
+                            </div>
+                            <div class="tag">
+                                <p>CYPECAD</p>
+                            </div>
+                            <div class="tag">
+                                <p>Presto</p>
+                            </div>
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>Grasshopper</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <div class="sticky-header">
+                <h2 data-key="educationTitle">Educación</h2>
+            </div>
+            <div class="contents">
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="eduContinuaTenure">2023 — actualidad</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.youtube.com/@javierfidalgosaeta">
+                            <h3 class="anchor-text card-header" data-key="eduContinuaTitle">
+                                Formación continua y
+                                <span class="no-break">autodidacta <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="eduContinuaDesc1">
+                            Desarrollo continuo y actualizado de habilidades en software BIM y diseño computacional, gracias principalmente a cursos de acceso abierto, ofrecidos por tutores de gran calidad entre los que destaco:
+                        </p>
+                        <p data-key="eduContinuaDesc2">
+                            <a target="_blank" class="anchor-text" href="https://www.youtube.com/@DesignGoBrr">Gediminas Kirdeikis</a>, por sus cursos de Rhinoceros 3D, modelado con SubD, y Grasshopper, en YouTube.
+                        </p>
+                        <p data-key="eduContinuaDesc3">
+                            <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/salvadormoret/">Salva Moret</a> y <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/paulaubin/">Paul Aubin</a>, por sus cursos de Autodesk Revit, en LinkedIn Learning.
+                        </p>
+                        <p data-key="eduContinuaDesc4">
+                            <a target="_blank" class="anchor-text" href="https://www.youtube.com/@AussieBIMGuru">Gavin Nicholls</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ErikFrits">Erik Frits</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@longnguyenphuoc">Long Nguyen</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ParametricCamp">Jose Luis García del Castillo y López</a>, y <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ProArchitecture">Milos Dimcic</a>, por sus cursos sobre diseño computacional y programación aplicada a Revit y Rhino, en YouTube.
+                        </p>
+                        <p data-key="eduContinuaDesc5">
+                            <a target="_blank" class="anchor-text" href="https://www.youtube.com/@SuperSimpleDev">Simon Bao</a>, por sus cursos de programación, en YouTube.
+                        </p>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>SubD</p>
+                            </div>
+                            <div class="tag">
+                                <p>Grasshopper</p>
+                            </div>
+                            <div class="tag">
+                                <p>Revit</p>
+                            </div>
+                            <div class="tag">
+                                <p>Dynamo</p>
+                            </div>
+                            <div class="tag">
+                                <p>Python</p>
+                            </div>
+                            <div class="tag">
+                                <p>PyRevit</p>
+                            </div>
+                            <div class="tag">
+                                <p>C# + Revit</p>
+                            </div>
+                            <div class="tag">
+                                <p>C# + Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>HTML + CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="eduPyRevitTenure">2025</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://butic.es/">
+                            <h3 class="anchor-text card-header" data-key="eduPyRevitTitle">
+                                Curso de PyRevit · butic The New 
+                                <span class="no-break">School <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="eduPyRevitDesc">
+                            Curso oficial de Autodesk de desarrollo sobre la API de Revit con Python,  con una duración de 30 horas e impartido por <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/carlos-romero-carballo-48119618a/">Carlos Romero Carballo</a>. Desarrollo de scripts para la automatización de tareas y mejora de flujos de trabajo mediante PyRevit, que permite la creación de barras de herramientas personalizadas.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/cert-pyrevit-butic.pdf" class="anchor-text card-link">
+                                <p data-key="eduPyRevitLink">
+                                    <i class="fa-solid fa-award"></i>
+                                    Certificado Curso de PyRevit - butic The New School
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Revit</p>
+                            </div>
+                            <div class="tag">
+                                <p>Python</p>
+                            </div>
+                            <div class="tag">
+                                <p>PyRevit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="eduRevitAdvTenure">2025</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://bimlearning.es/">
+                            <h3 class="anchor-text card-header" data-key="eduRevitAdvTitle">
+                                Curso de Revit Avanzado · 
+                                <span class="no-break">BIMLEARNING <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="eduRevitAdvDesc">
+                            Curso oficial de Autodesk de Revit Avanzado,  con una duración de 45 horas e impartido por <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/jose-manuel-zaragoza-8133292a/">Jose Manuel Zaragoza</a>. Dominio de las capacidades para establecer estrategias BIM, crear familias, parámetros, tablas, organización y planteamiento BIM del proyecto, uso de masas, geometrías complejas y utilización de las herramientas más allá de su conocimiento básico en proyectos de alta complejidad.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/cert-revit-adv-bimlearning.pdf" class="anchor-text card-link">
+                                <p data-key="eduRevitAdvLink">
+                                    <i class="fa-solid fa-award"></i>
+                                    Certificado Curso de Revit Avanzado - BIMLEARNING
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Revit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="eduMasterTenure">2022 — 2023</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.upm.es/">
+                            <h3 class="anchor-text card-header" data-key="eduMasterTitle">
+                                Máster Habilitante en Arquitectura ·  
+                                <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="eduMasterDesc">
+                            Máster universitario que habilita para el ejercicio de la profesión regulada de arquitecto en la Unión Europea, impartido en la Escuela Técnica Superior de Arquitectura de Madrid, perteneciente a la Universidad Politécnica de Madrid.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/cert-master-arquitectura-jfs.pdf" class="anchor-text card-link">
+                                <p data-key="eduMasterLink1">
+                                    <i class="fa-solid fa-award"></i>
+                                    Título Máster en Arquitectura - ETSAM-UPM
+                                </p>
+                            </a>
+                            <a href="#TFM" class="anchor-text card-link">
+                                <p data-key="eduMasterLink2">
+                                    <i class="fa-regular fa-map"></i>
+                                    Trabajo Fin de Máster: "campos <span class="italic">alíseos</span>"
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="eduGradoTenure">2015 — 2022</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.upm.es/">
+                            <h3 class="anchor-text card-header" data-key="eduGradoTitle">
+                                Grado Universitario en Arquitectura · 
+                                <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="eduGradoDesc">
+                            Grado universitario en fundamentos de la arquitectura, impartido en la Escuela Técnica Superior de Arquitectura de Madrid, perteneciente a la Universidad Politécnica de Madrid. Programa Erasmus+ en la Universidad de Arquitectura, Ingeniería Civil y Geodesia (<a target="_blank" class="anchor-text" href="https://www.uacg.bg/en">UACEG</a>) de Sofía, Bulgaria, durante el curso 2019-2020.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/cert-grado-arquitectura-jfs.pdf" class="anchor-text card-link">
+                                <p data-key="eduGradoLink1">
+                                    <i class="fa-solid fa-award"></i>
+                                    Título Grado en Arquitectura - ETSAM-UPM
+                                </p>
+                            </a>
+                            <a href="#TFG" class="anchor-text card-link">
+                                <p data-key="eduGradoLink2">
+                                    <i class="fa-regular fa-map"></i>
+                                    Trabajo Fin de Grado: La estructura industrializada en UHPFRC
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="eduEgiptologiaTenure">2022 — 2025</p>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.uab.cat/">
+                            <h3 class="anchor-text card-header" data-key="eduEgiptologiaTitle">
+                                Curso de Egiptología · 
+                                <span class="no-break">UAB <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="eduEgiptologiaDesc">
+                            Curso de Egiptología de la Universidad Autónoma de Barcelona, con una duración de más de 50 horas e impartido por <a target="_blank" class="anchor-text" href="https://khamaseenproject.uab.cat/equipo-josep-cervello/">Josep Cervelló</a> y <a target="_blank" class="anchor-text" href="http://joselull.com/">José Lull</a>, profesores agregados de Ciencias de la Antigüedad y la Edad Media.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/cert-curso-egipt-UAB.pdf" class="anchor-text card-link">
+                                <p data-key="eduEgiptologiaLink">
+                                    <i class="fa-solid fa-award"></i>
+                                    Certificado Curso de Egiptología - UAB
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </section>
+        <section id="projects">
+            <div class="sticky-header">
+                <h2 data-key="projectsTitle">Proyectos</h2>
+            </div>
+            <div class="contents">
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="projNakaginTenure">2023</p>
+                        <div class="project-image-container">
+                            <img src="/public/img-nakagin-capsule-challenge.png" alt="Propuesta para el Nakagin Capsule Challenge"/>
+                        </div>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.youtube.com/watch?v=Dx22yXzKcfc">
+                            <h3 class="anchor-text card-header" data-key="projNakaginTitle">
+                                Propuesta para el Nakagin Capsule 
+                                <span class="no-break">Challenge <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="projNakaginDesc">
+                            Concurso organizado por <a target="_blank" class="anchor-text" href="https://www.youtube.com/@DesignGoBrr">Gediminas Kirdeikis</a>, en el que debemos reimaginar el interior de una de las cápsulas de la <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Nakagin_Capsule_Tower">Torre Nakagin</a>, de Kisho Kurokawa. Obtención del <a target="_blank" href="https://www.youtube.com/watch?v=GdapYFXpDB8" class="anchor-text card-link">segundo premio</a> con una propuesta orgánico-computacional.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="https://www.youtube.com/watch?v=GdapYFXpDB8" class="anchor-text card-link">
+                                <p data-key="projNakaginLink1">
+                                    <i class="fa-solid fa-award"></i>
+                                    Ganadores del Nakagin Capsule Challenge
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-nakagin-capsule-challenge.pdf" class="anchor-text card-link">
+                                <p data-key="projNakaginLink2">
+                                    <i class="fa-regular fa-map"></i>
+                                    Propuesta para el Nakagin Capsule Challenge
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>Grasshopper</p>
+                            </div>
+                            <div class="tag">
+                                <p>V-Ray</p>
+                            </div>
+                            <div class="tag">
+                                <p>Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="projPortfolioTenure">2023</p>
+                        <div class="project-image-container">
+                            <img src="/public/img-portfolio-arquitectura-2023.png" alt="Portfolio arquitectura 2023"/>
+                        </div>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="public/pdf-portfolio-arquitectura-2023.pdf">
+                            <h3 class="anchor-text card-header" data-key="projPortfolioTitle">
+                                Portfolio arquitectura 
+                                <span class="no-break">2023 <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="projPortfolioDesc">
+                            Portfolio de arquitectura con una selección de proyectos académicos y personales realizados durante mi etapa universitaria.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/pdf-portfolio-arquitectura-2023.pdf" class="anchor-text card-link">
+                                <p data-key="projPortfolioLink">
+                                    <i class="fa-regular fa-map"></i>
+                                    Portfolio arquitectura 2023
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>InDesign</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="TFM" class="card">
+                    <div class="card-column1">
+                        <p class="tenure" data-key="projCamposAliseosTenure">2023</p>
+                        <div class="project-image-container">
+                            <img src="/public/img-tfm-campos-aliseos.png" alt="Trabajo de Fin de Máster: 'campos alíseos'"/>
+                        </div>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.upm.es/">
+                            <h3 class="anchor-text card-header" data-key="projCamposAliseosTitle">
+                                Trabajo de Fin de Máster en Arquitectura ·
+                                <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="projCamposAliseosDesc">
+                            Titulado <a target="_blank" class="anchor-text" href="https://archive.dpa-etsam.com/projects/campos-aliseos">"campos <span class="italic">alíseos</span>, la comuna autosuficiente de Punta de Anaga”</a>, este proyecto plantea un modo de vida alternativo y alisio-dependiente, camuflado en la atmósfera nebulosa de las remotas montañas del <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Macizo_de_Anaga">macizo de Anaga</a>, en la isla de Tenerife.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/pdf-campos-aliseos-03.pdf" class="anchor-text card-link">
+                                <p data-key="projCamposAliseosLink1">
+                                    <i class="fa-regular fa-map"></i>
+                                    Láminas 00-03 del proyecto
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-campos-aliseos-47.pdf" class="anchor-text card-link">
+                                <p data-key="projCamposAliseosLink2">
+                                    <i class="fa-regular fa-map"></i>
+                                    Láminas 04-07 del proyecto
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-campos-aliseos-811.pdf" class="anchor-text card-link">
+                                <p data-key="projCamposAliseosLink3">
+                                    <i class="fa-regular fa-map"></i>
+                                    Láminas 08-11 del proyecto
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-campos-aliseos-1214.pdf" class="anchor-text card-link">
+                                <p data-key="projCamposAliseosLink4">
+                                    <i class="fa-regular fa-map"></i>
+                                    Láminas 12-14 del proyecto
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-campos-aliseos-tec.pdf" class="anchor-text card-link">
+                                <p data-key="projCamposAliseosLink5">
+                                    <i class="fa-regular fa-map"></i>
+                                    Memoria técnica del proyecto
+                                </p>
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/@javierfidalgosaeta" class="anchor-text card-link">
+                                <p data-key="projCamposAliseosLink6">
+                                    <i class="fa-solid fa-play"></i>
+                                    Vídeo presentación del proyecto
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>Grasshopper</p>
+                            </div>
+                            <div class="tag">
+                                <p>V-Ray</p>
+                            </div>
+                            <div class="tag">
+                                <p>Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="TFG" class="card">
+                    <div class="card-column1">
+                        <p class="tenure">2022</p>
+                        <div class="project-image-container">
+                            <img src="/public/img-estructura-industrializada-uhpfrc.png" alt="Trabajo de Fin de Grado: La estructura industrializada en UHPFRC"/>
+                        </div>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.upm.es/">
+                            <h3 class="anchor-text card-header" data-key="projTFGTitle">
+                                Trabajo de Fin de Grado en Arquitectura ·
+                                <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="projTFGDesc">
+                            Titulado <a target="_blank" class="anchor-text" href="https://oa.upm.es/69685/">"La estructura industrializada en UHPFRC: estudio del prefabricado estructural en hormigón de ultra­ altas prestaciones reforzado con fibras"</a>, este trabajo explora los diseños de componentes estructurales prefabricados en UHPFRC, con especial atención a su sección, comparándola con la de los elementos industrializados en materiales estructurales convencionales.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/pdf-estructura-industrializada-uhpfrc1.pdf" class="anchor-text card-link">
+                                <p data-key="projTFGLink1">
+                                    <i class="fa-regular fa-map"></i>
+                                    Trabajo de Fin de Grado: La estructura industrializada en UHPFRC 1/3
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-estructura-industrializada-uhpfrc2.pdf" class="anchor-text card-link">
+                                <p data-key="projTFGLink2">
+                                    <i class="fa-regular fa-map"></i>
+                                    Trabajo de Fin de Grado: La estructura industrializada en UHPFRC 2/3
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-estructura-industrializada-uhpfrc3.pdf" class="anchor-text card-link">
+                                <p data-key="projTFGLink3">
+                                    <i class="fa-regular fa-map"></i>
+                                    Trabajo de Fin de Grado: La estructura industrializada en UHPFRC 3/3
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>InDesign</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure">2021</p>
+                        <div class="project-image-container">
+                            <img src="/public/img-premios-andece-2021.png" alt="Propuesta para los Premios ANDECE VI edición"/>
+                        </div>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://premioandece.com/">
+                            <h3 class="anchor-text card-header" data-key="projAndeceTitle">
+                                Propuesta para los Premios ANDECE VI 
+                                <span class="no-break">edición <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="projAndeceDesc">
+                            Concurso para estudiantes organizado por <a target="_blank" class="anchor-text" href="https://andece.org/">ANDECE</a>, la Asociación Nacional de la Industria del Prefabricado de Hormigón. Obtención del <a target="_blank" class="anchor-text" href="https://premioandece.com/ediciones">primer premio</a> con la propuesta "Lonja de las Perlas".
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="https://youtu.be/FJcny_zKp_g?si=bueXuJnPOqK-JR_L" class="anchor-text card-link">
+                                <p data-key="projAndeceLink1">
+                                    <i class="fa-solid fa-award"></i>
+                                    Entrega Premios ANDECE VI edición
+                                </p>
+                            </a>
+                            <a target="_blank" href="/public/pdf-premios-andece-2021.pdf" class="anchor-text card-link">
+                                <p data-key="projAndeceLink2">
+                                    <i class="fa-regular fa-map"></i>
+                                    Panel resumen de la propuesta
+                                </p>
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/@javierfidalgosaeta" class="anchor-text card-link">
+                                <p data-key="projAndeceLink3">
+                                    <i class="fa-solid fa-play"></i>
+                                    Proceso constructivo de la propuesta
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>V-Ray</p>
+                            </div>
+                            <div class="tag">
+                                <p>Twinmotion</p>
+                            </div>
+                            <div class="tag">
+                                <p>Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-column1">
+                        <p class="tenure">2021</p>
+                        <div class="project-image-container">
+                            <img src="/public/img-piscina-wellness-barcelona.png" alt="Propuesta para el Concurso Centro Acuático en Plaza Gaudí"/>
+                        </div>
+                    </div>
+                    <div class="card-column2">   
+                        <a target="_blank" href="https://www.firabarcelona.com/es/nota-prensa/piscina_s046/piscina-welness-propone-a-futuros-arquitectos-imaginar-un-centro-acuatico-frente-a-la-sagrada-familia/">
+                            <h3 class="anchor-text card-header" data-key="projAcuaticoTitle">
+                                Propuesta para el Concurso Centro Acuático en Plaza 
+                                <span class="no-break">Gaudí <i class="fa-solid fa-arrow-turn-up"></i></span>
+                            </h3>
+                        </a>
+                        <p data-key="projAcuaticoDesc">
+                            Concurso internacional para estudiantes de arquitectura organizado por la feria <a target="_blank" class="anchor-text" href="https://www.piscinabarcelona.es/">Piscina Barcelona</a>. En su edición 2021 se propone proyectar un centro acuático integrado en la Plaza Gaudí de Barcelona, frente a la <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia">Sagrada Familia</a>.
+                        </p>
+                        <div class="card-links-container">
+                            <a target="_blank" href="/public/pdf-piscina-wellness-barcelona.pdf" class="anchor-text card-link">
+                                <p data-key="projAcuaticoLink">
+                                    <i class="fa-regular fa-map"></i>
+                                    Panel resumen de la propuesta
+                                </p>
+                            </a>
+                        </div>
+                        <div class="tag-container">
+                            <div class="tag">
+                                <p>Rhino</p>
+                            </div>
+                            <div class="tag">
+                                <p>V-Ray</p>
+                            </div>
+                            <div class="tag">
+                                <p>Twinmotion</p>
+                            </div>
+                            <div class="tag">
+                                <p>Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p data-key="footerText">Esta página ha sido creada por <a class="anchor-text" href="#top-of-page">Javier Fidalgo Saeta <i class="fa-solid fa-arrow-turn-up"></i></a> en <a target="_blank" class="anchor-text" href="https://code.visualstudio.com/">Visual Studio Code</a>, con la ayuda del curso de <a target="_blank" class="anchor-text" href="https://youtu.be/Eb3lOiukwAQ?si=utUPfATYSmF1ymGE">HTML+CSS</a> de <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/jamezmcarthur/">James McArthur</a>, y con el portfolio web de <a target="_blank" class="anchor-text" href="https://brittanychiang.com/">Brittany Chiang</a> como referencia de diseño. Todos los textos están escritos en tipografía <a target="_blank" class="anchor-text" href="https://rsms.me/inter/">Inter</a>.
+        </p>
+    </footer>
+    <script>
+        // Objeto con las traducciones
+        const translations = {
+            es: {
+                aboutTitle: 'Sobre mí',
+                experienceTitle: 'Experiencia',
+                educationTitle: 'Educación',
+                projectsTitle: 'Proyectos',
+                navAbout: 'Sobre mí',
+                navExperience: 'Experiencia',
+                navEducation: 'Educación',
+                navProjects: 'Proyectos',
+                headerSubtitle: 'Arquitecto / Especialista BIM / Diseñador computacional',
+                headerDescription: 'Apasionado del buen diseño y la ejecución eficiente mediante el empleo de metodologías y herramientas innovadoras.',
+                aboutPara1: 'Soy un arquitecto basado en Madrid con un fuerte interés en la intersección entre diseño y tecnología. Estoy especializado en el desarrollo de proyectos de edificación en entornos BIM, aprovechando al máximo las capacidades de <a target="_blank" class="anchor-text" href="https://www.autodesk.com/es/products/revit/">Autodesk Revit</a> y <a target="_blank" class="anchor-text" href="https://www.rhino3d.com/">Rhinoceros 3D</a>. No obstante, cuando estos programas se quedan cortos a la hora de abordar flujos de trabajo específicos, soy capaz de desarrollar mis propias herramientas mediante programación gráfica (Revit-<a target="_blank" class="anchor-text" href="https://dynamobim.org/">Dynamo</a>, Rhino-<a target="_blank" class="anchor-text" href="https://www.grasshopper3d.com/">Grasshopper</a>) o scripting (<a target="_blank" class="anchor-text" href="https://pyrevitlabs.notion.site/">PyRevit</a>, C# + Revit/Rhino).',
+                aboutPara2: 'Actualmente, trabajo como Arquitecto BIM en la Gerencia de Ingeniería y Edificación de Tragsatec, <a target="_blank" class="anchor-text" href="https://www.tragsa.es/">Grupo Tragsa</a>, donde contribuyo al desarrollo de proyectos de diversa tipología y escala para la administración pública, desde la fase conceptual hasta su ejecución, con un papel destacado junto al BIM Manager, modelando y coordinando disciplinas.',
+                aboutPara3: 'En el pasado, he tenido la oportunidad de trabajar en proyectos únicos de arquitectura y urbanismo con los que he podido profundizar en temas relevantes como el diseño sostenible basado en datos, la prefabricación y fabricación digital, y la materialización constructiva de diseños geométricamente complejos.',
+                aboutPara4: 'En mi tiempo libre me gusta aplicar mis habilidades en pequeños proyectos personales, además de pasar tiempo con mis seres <a target="_blank" class="anchor-text-secret" href="public/img-secret-cris.jpg">queridos</a>, aprender sobre historia, y desconectar en la pista de pádel.',
+                expTragsaTitle: 'Arquitecto BIM · Grupo  <span class="no-break">Tragsa <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                expTragsaDesc: 'Modelado, coordinación de disciplinas y desarrollo de herramientas en diversos proyectos de arquitectura con metodología BIM para la Administración pública, desde fases conceptuales hasta el proyecto de ejecución, incluso apoyo en fase de obra. Especialización en edificación de nueva planta para bases de bomberos forestales, así como en proyectos de rehabilitación de oficinas administrativas.',
+                expLabitTitle: 'Arquitecto BIM Junior · Labit <span class="no-break">Group <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                expLabitDesc: 'Participación en diversos proyectos singulares de arquitectura y urbanismo en entornos BIM, especialmente en fases iniciales de diseño para grandes desarrollos en Oriente Medio. Análisis y diseño mediante datos. Modelado de geometrías complejas mediante métodos paramétricos y SubD.',
+                expLabTitle: 'Arquitecto en prácticas · The <span class="no-break">Lab <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                expLabDesc: 'Prácticas en el estudio del profesor <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/enrique-mart%C3%ADnez-sierra-bba0063b/">Enrique Martínez Sierra</a>, especializado en patrimonio construido y estructuras. Participación en proyectos de rehabilitación en conjuntos históricos y residenciales. Elaboración de presupuestos, inspecciones técnicas de edificios (ITE) e informes periciales.',
+                eduContinuaTitle: 'Formación continua y <span class="no-break">autodidacta <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduContinuaDesc1: 'Desarrollo continuo y actualizado de habilidades en software BIM y diseño computacional, gracias principalmente a cursos de acceso abierto, ofrecidos por tutores de gran calidad entre los que destaco:',
+                eduContinuaDesc2: '<a target="_blank" class="anchor-text" href="https://www.youtube.com/@DesignGoBrr">Gediminas Kirdeikis</a>, por sus cursos de Rhinoceros 3D, modelado con SubD, y Grasshopper, en YouTube.',
+                eduContinuaDesc3: '<a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/salvadormoret/">Salva Moret</a> y <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/paulaubin/">Paul Aubin</a>, por sus cursos de Autodesk Revit, en LinkedIn Learning.',
+                eduContinuaDesc4: '<a target="_blank" class="anchor-text" href="https://www.youtube.com/@AussieBIMGuru">Gavin Nicholls</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ErikFrits">Erik Frits</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@longnguyenphuoc">Long Nguyen</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ParametricCamp">Jose Luis García del Castillo y López</a>, y <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ProArchitecture">Milos Dimcic</a>, por sus cursos sobre diseño computacional y programación aplicada a Revit y Rhino, en YouTube.',
+                eduContinuaDesc5: '<a target="_blank" class="anchor-text" href="https://www.youtube.com/@SuperSimpleDev">Simon Bao</a>, por sus cursos de programación, en YouTube.',
+                eduPyRevitTitle: 'Curso de PyRevit · butic The New <span class="no-break">School <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduPyRevitDesc: 'Curso oficial de Autodesk de desarrollo sobre la API de Revit con Python,  con una duración de 30 horas e impartido por <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/carlos-romero-carballo-48119618a/">Carlos Romero Carballo</a>. Desarrollo de scripts para la automatización de tareas y mejora de flujos de trabajo mediante PyRevit, que permite la creación de barras de herramientas personalizadas.',
+                eduPyRevitLink: '<i class="fa-solid fa-award"></i> Certificado Curso de PyRevit - butic The New School',
+                eduRevitAdvTitle: 'Curso de Revit Avanzado · <span class="no-break">BIMLEARNING <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduRevitAdvDesc: 'Curso oficial de Autodesk de Revit Avanzado,  con una duración de 45 horas e impartido por <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/jose-manuel-zaragoza-8133292a/">Jose Manuel Zaragoza</a>. Dominio de las capacidades para establecer estrategias BIM, crear familias, parámetros, tablas, organización y planteamiento BIM del proyecto, uso de masas, geometrías complejas y utilización de las herramientas más allá de su conocimiento básico en proyectos de alta complejidad.',
+                eduRevitAdvLink: '<i class="fa-solid fa-award"></i> Certificado Curso de Revit Avanzado - BIMLEARNING',
+                eduGradoTitle: 'Grado Universitario en Arquitectura · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduGradoDesc: 'Grado universitario en fundamentos de la arquitectura, impartido en la Escuela Técnica Superior de Arquitectura de Madrid, perteneciente a la Universidad Politécnica de Madrid. Programa Erasmus+ en la Universidad de Arquitectura, Ingeniería Civil y Geodesia (<a target="_blank" class="anchor-text" href="https://www.uacg.bg/en">UACEG</a>) de Sofía, Bulgaria, durante el curso 2019-2020.',
+                eduGradoLink1: 'Título Grado en Arquitectura - ETSAM-UPM',
+                eduGradoLink2: 'Trabajo Fin de Grado: La estructura industrializada en UHPFRC',
+                eduEgiptologiaTitle: 'Curso de Egiptología · <span class="no-break">UAB <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduEgiptologiaDesc: 'Curso de Egiptología de la Universidad Autónoma de Barcelona, con una duración de más de 50 horas e impartido por <a target="_blank" class="anchor-text" href="https://khamaseenproject.uab.cat/equipo-josep-cervello/">Josep Cervelló</a> y <a target="_blank" class="anchor-text" href="http://joselull.com/">José Lull</a>, profesores agregados de Ciencias de la Antigüedad y la Edad Media.',
+                eduEgiptologiaLink: 'Certificado Curso de Egiptología - UAB',
+                projNakaginTitle: 'Propuesta para el Nakagin Capsule <span class="no-break">Challenge <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projNakaginDesc: 'Concurso organizado por <a target="_blank" class="anchor-text" href="https://www.youtube.com/@DesignGoBrr">Gediminas Kirdeikis</a>, en el que debemos reimaginar el interior de una de las cápsulas de la <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Nakagin_Capsule_Tower">Torre Nakagin</a>, de Kisho Kurokawa. Obtención del <a target="_blank" href="https://www.youtube.com/watch?v=GdapYFXpDB8" class="anchor-text card-link">segundo premio</a> con una propuesta orgánico-computacional.',
+                projNakaginLink1: 'Ganadores del Nakagin Capsule Challenge',
+                projNakaginLink2: 'Propuesta para el Nakagin Capsule Challenge',
+                projPortfolioTitle: 'Portfolio arquitectura <span class="no-break">2023 <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projPortfolioDesc: 'Portfolio de arquitectura con una selección de proyectos académicos y personales realizados durante mi etapa universitaria.',
+                projPortfolioLink: 'Portfolio arquitectura 2023',
+                projCamposAliseosTitle: 'Trabajo de Fin de Máster en Arquitectura · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projCamposAliseosDesc: 'Titulado <a target="_blank" class="anchor-text" href="https://archive.dpa-etsam.com/projects/campos-aliseos">"campos <span class="italic">alíseos</span>, la comuna autosuficiente de Punta de Anaga"</a>, este proyecto plantea un modo de vida alternativo y alisio-dependiente, camuflado en la atmósfera nebulosa de las remotas montañas del <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Macizo_de_Anaga">macizo de Anaga</a>, en la isla de Tenerife.',
+                expTragsaTenure: '2024 — actualidad',
+                expLabitTenure: '2023 — 2024',
+                expLabTenure: '2019 — 2021',
+                eduContinuaTenure: '2023 — actualidad',
+                eduPyRevitTenure: '2025',
+                eduRevitAdvTenure: '2025',
+                eduMasterTenure: '2022 — 2023',
+                eduMasterTitle: 'Máster Habilitante en Arquitectura · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduMasterDesc: 'Máster universitario que habilita para el ejercicio de la profesión regulada de arquitecto en la Unión Europea, impartido en la Escuela Técnica Superior de Arquitectura de Madrid, perteneciente a la Universidad Politécnica de Madrid.',
+                eduMasterLink1: '<i class="fa-solid fa-award"></i> Título Máster en Arquitectura - ETSAM-UPM',
+                eduMasterLink2: '<i class="fa-regular fa-map"></i> Trabajo Fin de Máster: "campos <span class="italic">alíseos</span>"',
+                eduGradoTenure: '2015 — 2022',
+                eduGradoLink1: '<i class="fa-solid fa-award"></i> Título Grado en Arquitectura - ETSAM-UPM',
+                eduGradoLink2: '<i class="fa-regular fa-map"></i> Trabajo Fin de Grado: La estructura industrializada en UHPFRC',
+                eduEgiptologiaTenure: '2022 — 2025',
+                eduEgiptologiaLink: '<i class="fa-solid fa-award"></i> Certificado Curso de Egiptología - UAB',
+                projNakaginTenure: '2023',
+                projNakaginLink1: '<i class="fa-solid fa-award"></i> Ganadores del Nakagin Capsule Challenge',
+                projNakaginLink2: '<i class="fa-regular fa-map"></i> Propuesta para el Nakagin Capsule Challenge',
+                projPortfolioTenure: '2023',
+                projPortfolioLink: '<i class="fa-regular fa-map"></i> Portfolio arquitectura 2023',
+                projCamposAliseosTenure: '2023',
+                projCamposAliseosLink1: '<i class="fa-regular fa-map"></i> Láminas 00-03 del proyecto',
+                projCamposAliseosLink2: '<i class="fa-regular fa-map"></i> Láminas 04-07 del proyecto',
+                projCamposAliseosLink3: '<i class="fa-regular fa-map"></i> Láminas 08-11 del proyecto',
+                projCamposAliseosLink4: '<i class="fa-regular fa-map"></i> Láminas 12-14 del proyecto',
+                projCamposAliseosLink5: '<i class="fa-regular fa-map"></i> Memoria técnica del proyecto',
+                projCamposAliseosLink6: '<i class="fa-solid fa-play"></i> Vídeo presentación del proyecto',
+                projTFGTitle: 'Trabajo de Fin de Grado en Arquitectura · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projTFGDesc: 'Titulado <a target="_blank" class="anchor-text" href="https://oa.upm.es/69685/">"La estructura industrializada en UHPFRC: estudio del prefabricado estructural en hormigón de ultra­ altas prestaciones reforzado con fibras"</a>, este trabajo explora los diseños de componentes estructurales prefabricados en UHPFRC, con especial atención a su sección, comparándola con la de los elementos industrializados en materiales estructurales convencionales.',
+                projTFGLink1: '<i class="fa-regular fa-map"></i> Trabajo de Fin de Grado: La estructura industrializada en UHPFRC 1/3',
+                projTFGLink2: '<i class="fa-regular fa-map"></i> Trabajo de Fin de Grado: La estructura industrializada en UHPFRC 2/3',
+                projTFGLink3: '<i class="fa-regular fa-map"></i> Trabajo de Fin de Grado: La estructura industrializada en UHPFRC 3/3',
+                projAndeceTitle: 'Propuesta para los Premios ANDECE VI <span class="no-break">edición <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projAndeceDesc: 'Concurso para estudiantes organizado por <a target="_blank" class="anchor-text" href="https://andece.org/">ANDECE</a>, la Asociación Nacional de la Industria del Prefabricado de Hormigón. Obtención del <a target="_blank" class="anchor-text" href="https://premioandece.com/ediciones">primer premio</a> con la propuesta "Lonja de las Perlas".',
+                projAndeceLink1: '<i class="fa-solid fa-award"></i> Entrega Premios ANDECE VI edición',
+                projAndeceLink2: '<i class="fa-regular fa-map"></i> Panel resumen de la propuesta',
+                projAndeceLink3: '<i class="fa-solid fa-play"></i> Proceso constructivo de la propuesta',
+                projAcuaticoTitle: 'Propuesta para el Concurso Centro Acuático en Plaza <span class="no-break">Gaudí <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projAcuaticoDesc: 'Concurso internacional para estudiantes de arquitectura organizado por la feria <a target="_blank" class="anchor-text" href="https://www.piscinabarcelona.es/">Piscina Barcelona</a>. En su edición 2021 se propone proyectar un centro acuático integrado en la Plaza Gaudí de Barcelona, frente a la <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia">Sagrada Familia</a>.',
+                projAcuaticoLink: '<i class="fa-regular fa-map"></i> Panel resumen de la propuesta',
+                footerText: 'Esta página ha sido creada por <a class="anchor-text" href="#top-of-page">Javier Fidalgo Saeta <i class="fa-solid fa-arrow-turn-up"></i></a> en <a target="_blank" class="anchor-text" href="https://code.visualstudio.com/">Visual Studio Code</a>, con la ayuda del curso de <a target="_blank" class="anchor-text" href="https://youtu.be/Eb3lOiukwAQ?si=utUPfATYSmF1ymGE">HTML+CSS</a> de <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/jamezmcarthur/">James McArthur</a>, y con el portfolio web de <a target="_blank" class="anchor-text" href="https://brittanychiang.com/">Brittany Chiang</a> como referencia de diseño. Todos los textos están escritos en tipografía <a target="_blank" class="anchor-text" href="https://rsms.me/inter/">Inter</a>.'
+            },
+            en: {
+                aboutTitle: 'About',
+                experienceTitle: 'Experience',
+                educationTitle: 'Education',
+                projectsTitle: 'Projects',
+                navAbout: 'About',
+                navExperience: 'Experience',
+                navEducation: 'Education',
+                navProjects: 'Projects',
+                headerSubtitle: 'Architect / BIM Specialist / Computational Designer',
+                headerDescription: 'Passionate about good design and efficient execution through the use of innovative methodologies and tools.',
+                aboutPara1: 'I am an architect based in Madrid with a strong interest in the intersection between design and technology. I specialize in the development of building projects in BIM environments, making the most of the capabilities of <a target="_blank" class="anchor-text" href="https://www.autodesk.com/es/products/revit/">Autodesk Revit</a> and <a target="_blank" class="anchor-text" href="https://www.rhino3d.com/">Rhinoceros 3D</a>. However, when these programs fall short in addressing specific workflows, I am able to develop my own tools through graphical programming (Revit-<a target="_blank" class="anchor-text" href="https://dynamobim.org/">Dynamo</a>, Rhino-<a target="_blank" class="anchor-text" href="https://www.grasshopper3d.com/">Grasshopper</a>) or scripting (<a target="_blank" class="anchor-text" href="https://pyrevitlabs.notion.site/">PyRevit</a>, C# + Revit/Rhino).',
+                aboutPara2: 'Currently, I work as a BIM Architect in the Engineering and Building Management of Tragsatec, <a target="_blank" class="anchor-text" href="https://www.tragsa.es/">Grupo Tragsa</a>, where I contribute to the development of projects of various types and scales for the public administration, from the conceptual phase to their execution, with a prominent role alongside the BIM Manager, modeling and coordinating disciplines.',
+                aboutPara3: 'In the past, I have had the opportunity to work on unique architecture and urban planning projects through which I have been able to delve into relevant topics such as data-based sustainable design, prefabrication and digital fabrication, and the constructive materialization of geometrically complex designs.',
+                aboutPara4: 'In my free time, I like to apply my skills in small personal projects, as well as spend time with my <a target="_blank" class="anchor-text-secret" href="public/img-secret-cris.jpg">loved ones</a>, learn about history, and unwind on the paddle court.',
+                expTragsaTitle: 'BIM Architect · Grupo  <span class="no-break">Tragsa <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                expTragsaDesc: 'Modeling, discipline coordination, and tool development in various architecture projects using BIM methodology for the public administration, from conceptual phases to the execution project, including support in the construction phase. Specialization in new construction for forest fire stations, as well as in rehabilitation projects for administrative offices.',
+                expLabitTitle: 'Junior BIM Architect · Labit <span class="no-break">Group <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                expLabitDesc: 'Participation in various unique architecture and urban planning projects in BIM environments, especially in initial design phases for large developments in the Middle East. Analysis and design through data. Modeling of complex geometries using parametric methods and SubD.',
+                expLabTitle: 'Architect in training · The <span class="no-break">Lab <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                expLabDesc: 'Internship at the studio of professor <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/enrique-mart%C3%ADnez-sierra-bba0063b/">Enrique Martínez Sierra</a>, specialized in built heritage and structures. Participation in rehabilitation projects in historical and residential complexes. Preparation of budgets, technical building inspections (ITE), and expert reports.',
+                eduContinuaTitle: 'Continuous training and <span class="no-break">self-taught <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduContinuaDesc1: 'Continuous and updated development of skills in BIM software and computational design, thanks mainly to open access courses, offered by high-quality tutors among whom I highlight:',
+                eduContinuaDesc2: '<a target="_blank" class="anchor-text" href="https://www.youtube.com/@DesignGoBrr">Gediminas Kirdeikis</a>, for his courses on Rhinoceros 3D, SubD modeling, and Grasshopper, on YouTube.',
+                eduContinuaDesc3: '<a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/salvadormoret/">Salva Moret</a> and <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/paulaubin/">Paul Aubin</a>, for their courses on Autodesk Revit, on LinkedIn Learning.',
+                eduContinuaDesc4: '<a target="_blank" class="anchor-text" href="https://www.youtube.com/@AussieBIMGuru">Gavin Nicholls</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ErikFrits">Erik Frits</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@longnguyenphuoc">Long Nguyen</a>, <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ParametricCamp">Jose Luis García del Castillo y López</a>, and <a target="_blank" class="anchor-text" href="https://www.youtube.com/@ProArchitecture">Milos Dimcic</a>, for their courses on computational design and programming applied to Revit and Rhino, on YouTube.',
+                eduContinuaDesc5: '<a target="_blank" class="anchor-text" href="https://www.youtube.com/@SuperSimpleDev">Simon Bao</a>, for his programming courses, on YouTube.',
+                eduPyRevitTitle: 'PyRevit Course · butic The New <span class="no-break">School <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduPyRevitDesc: 'Official Autodesk course on Revit API development with Python, with a duration of 30 hours and taught by <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/carlos-romero-carballo-48119618a/">Carlos Romero Carballo</a>. Development of scripts for task automation and workflow improvement through PyRevit, which allows the creation of custom toolbars.',
+                eduPyRevitLink: '<i class="fa-solid fa-award"></i> PyRevit Course Certificate - butic The New School',
+                eduRevitAdvTitle: 'Advanced Revit Course · <span class="no-break">BIMLEARNING <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduRevitAdvDesc: 'Official Autodesk Advanced Revit course, with a duration of 45 hours and taught by <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/jose-manuel-zaragoza-8133292a/">Jose Manuel Zaragoza</a>. Mastery of the capabilities to establish BIM strategies, create families, parameters, tables, organization and BIM setup of the project, use of masses, complex geometries, and use of tools beyond their basic knowledge in high-complexity projects.',
+                eduRevitAdvLink: '<i class="fa-solid fa-award"></i> Advanced Revit Course Certificate - BIMLEARNING',
+                eduGradoTitle: 'Bachelor\'s Degree in Architecture · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduGradoDesc: 'Bachelor\'s degree in architectural fundamentals, taught at the School of Architecture of Madrid, belonging to the Polytechnic University of Madrid. Erasmus+ program at the University of Architecture, Civil Engineering and Geodesy (<a target="_blank" class="anchor-text" href="https://www.uacg.bg/en">UACEG</a>) in Sofia, Bulgaria, during the 2019-2020 academic year.',
+                eduGradoLink1: 'Bachelor\'s Degree in Architecture - ETSAM-UPM',
+                eduGradoLink2: 'Bachelor\'s Thesis: The industrialized structure in UHPFRC',
+                eduEgiptologiaTitle: 'Egyptology Course · <span class="no-break">UAB <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduEgiptologiaDesc: 'Egyptology course from the Autonomous University of Barcelona, with a duration of more than 50 hours and taught by <a target="_blank" class="anchor-text" href="https://khamaseenproject.uab.cat/equipo-josep-cervello/">Josep Cervelló</a> and <a target="_blank" class="anchor-text" href="http://joselull.com/">José Lull</a>, associate professors of Ancient History and the Middle Ages.',
+                eduEgiptologiaLink: 'Egyptology Course Certificate - UAB',
+                projNakaginTitle: 'Proposal for the Nakagin Capsule <span class="no-break">Challenge <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projNakaginDesc: 'Competition organized by <a target="_blank" class="anchor-text" href="https://www.youtube.com/@DesignGoBrr">Gediminas Kirdeikis</a>, in which we must reimagine the interior of one of the capsules of the <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Nakagin_Capsule_Tower">Nakagin Tower</a>, by Kisho Kurokawa. Obtaining the <a target="_blank" href="https://www.youtube.com/watch?v=GdapYFXpDB8" class="anchor-text card-link">second prize</a> with an organic-computational proposal.',
+                projNakaginLink1: 'Nakagin Capsule Challenge Winners',
+                projNakaginLink2: 'Proposal for the Nakagin Capsule Challenge',
+                projPortfolioTitle: 'Architecture portfolio <span class="no-break">2023 <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projPortfolioDesc: 'Architecture portfolio with a selection of academic and personal projects carried out during my university years.',
+                projPortfolioLink: 'Architecture portfolio 2023',
+                projCamposAliseosTitle: 'Master\'s Thesis in Architecture · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projCamposAliseosDesc: 'Titled <a target="_blank" class="anchor-text" href="https://archive.dpa-etsam.com/projects/campos-aliseos">"campos <span class="italic">alíseos</span>, the self-sufficient commune of Punta de Anaga"</a>, this project proposes an alternative and trade-wind-dependent way of life, camouflaged in the misty atmosphere of the remote mountains of the <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Macizo_de_Anaga">Anaga massif</a>, on the island of Tenerife.',
+                expTragsaTenure: '2024 — present',
+                expLabitTenure: '2023 — 2024',
+                expLabTenure: '2019 — 2021',
+                eduContinuaTenure: '2023 — present',
+                eduPyRevitTenure: '2025',
+                eduRevitAdvTenure: '2025',
+                eduMasterTenure: '2022 — 2023',
+                eduMasterTitle: 'Master\'s Degree in Architecture · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                eduMasterDesc: 'Master\'s degree that qualifies for the regulated profession of architect in the European Union, taught at the School of Architecture of Madrid, belonging to the Polytechnic University of Madrid.',
+                eduMasterLink1: '<i class="fa-solid fa-award"></i> Master\'s Degree in Architecture - ETSAM-UPM',
+                eduMasterLink2: '<i class="fa-regular fa-map"></i> Master\'s Thesis: "campos <span class="italic">alíseos</span>"',
+                eduGradoTenure: '2015 — 2022',
+                eduGradoLink1: '<i class="fa-solid fa-award"></i> Bachelor\'s Degree in Architecture - ETSAM-UPM',
+                eduGradoLink2: '<i class="fa-regular fa-map"></i> Bachelor\'s Thesis: The industrialized structure in UHPFRC',
+                eduEgiptologiaTenure: '2022 — 2025',
+                eduEgiptologiaLink: '<i class="fa-solid fa-award"></i> Egyptology Course Certificate - UAB',
+                projNakaginTenure: '2023',
+                projNakaginLink1: '<i class="fa-solid fa-award"></i> Nakagin Capsule Challenge Winners',
+                projNakaginLink2: '<i class="fa-regular fa-map"></i> Proposal for the Nakagin Capsule Challenge',
+                projPortfolioTenure: '2023',
+                projPortfolioLink: '<i class="fa-regular fa-map"></i> Architecture portfolio 2023',
+                projCamposAliseosTenure: '2023',
+                projCamposAliseosLink1: '<i class="fa-regular fa-map"></i> Project sheets 00-03',
+                projCamposAliseosLink2: '<i class="fa-regular fa-map"></i> Project sheets 04-07',
+                projCamposAliseosLink3: '<i class="fa-regular fa-map"></i> Project sheets 08-11',
+                projCamposAliseosLink4: '<i class="fa-regular fa-map"></i> Project sheets 12-14',
+                projCamposAliseosLink5: '<i class="fa-regular fa-map"></i> Technical report of the project',
+                projCamposAliseosLink6: '<i class="fa-solid fa-play"></i> Project presentation video',
+                projTFGTitle: 'Bachelor\'s Thesis in Architecture · <span class="no-break">ETSAM-UPM <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projTFGDesc: 'Titled <a target="_blank" class="anchor-text" href="https://oa.upm.es/69685/">"Industrialized structure in UHPFRC: study of structural prefabrication in ultra-high-performance fiber-reinforced concrete"</a>, this work explores the designs of prefabricated structural components in UHPFRC, with special attention to their section, comparing it with that of industrialized elements in conventional structural materials.',
+                projTFGLink1: '<i class="fa-regular fa-map"></i> Bachelor\'s Thesis: The industrialized structure in UHPFRC 1/3',
+                projTFGLink2: '<i class="fa-regular fa-map"></i> Bachelor\'s Thesis: The industrialized structure in UHPFRC 2/3',
+                projTFGLink3: '<i class="fa-regular fa-map"></i> Bachelor\'s Thesis: The industrialized structure in UHPFRC 3/3',
+                projAndeceTitle: 'Proposal for the ANDECE Awards VI <span class="no-break">edition <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projAndeceDesc: 'Student competition organized by <a target="_blank" class="anchor-text" href="https://andece.org/">ANDECE</a>, the National Association of the Precast Concrete Industry. Obtaining the <a target="_blank" class="anchor-text" href="https://premioandece.com/ediciones">first prize</a> with the proposal "Lonja de las Perlas".',
+                projAndeceLink1: '<i class="fa-solid fa-award"></i> ANDECE Awards VI Edition Delivery',
+                projAndeceLink2: '<i class="fa-regular fa-map"></i> Proposal summary panel',
+                projAndeceLink3: '<i class="fa-solid fa-play"></i> Proposal construction process',
+                projAcuaticoTitle: 'Proposal for the Aquatic Center Competition in Plaza <span class="no-break">Gaudí <i class="fa-solid fa-arrow-turn-up"></i></span>',
+                projAcuaticoDesc: 'International student architecture competition organized by the <a target="_blank" class="anchor-text" href="https://www.piscinabarcelona.es/">Piscina Barcelona</a> fair. In its 2021 edition, it proposes to design an aquatic center integrated into Plaza Gaudí in Barcelona, in front of the <a target="_blank" class="anchor-text" href="https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia">Sagrada Familia</a>.',
+                projAcuaticoLink: '<i class="fa-regular fa-map"></i> Proposal summary panel',
+                footerText: 'This page has been created by <a class="anchor-text" href="#top-of-page">Javier Fidalgo Saeta <i class="fa-solid fa-arrow-turn-up"></i></a> in <a target="_blank" class="anchor-text" href="https://code.visualstudio.com/">Visual Studio Code</a>, with the help of the <a target="_blank" class="anchor-text" href="https://youtu.be/Eb3lOiukwAQ?si=utUPfATYSmF1ymGE">HTML+CSS</a> course by <a target="_blank" class="anchor-text" href="https://www.linkedin.com/in/jamezmcarthur/">James McArthur</a>, and with the web portfolio of <a target="_blank" class="anchor-text" href="https://brittanychiang.com/">Brittany Chiang</a> as a design reference. All texts are written in <a target="_blank" class="anchor-text" href="https://rsms.me/inter/">Inter</a> typography.'
+            }
+        };
+
+        // Obtener idioma guardado o usar español por defecto
+        let currentLanguage = localStorage.getItem('language') || 'es';
+
+        // Función para cambiar el idioma
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            updateContent();
+            updateButton();
+        }
+
+        // Función para actualizar el contenido
+        function updateContent() {
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (translations[currentLanguage][key]) {
+                    el.innerHTML = translations[currentLanguage][key];
+                }
+            });
+        }
+
+        // Función para actualizar el botón
+        function updateButton() {
+            const button = document.getElementById('language-toggle');
+            button.textContent = currentLanguage === 'es' ? 'EN' : 'ES';
+        }
+
+        // Inicializar
+        document.documentElement.lang = currentLanguage;
+        updateContent();
+        updateButton();
+
+        // Evento del botón
+        document.getElementById('language-toggle').addEventListener('click', () => {
+            setLanguage(currentLanguage === 'es' ? 'en' : 'es');
+        });
+
+        // Script de navegación con active
+        if (window.innerWidth > 1024) {
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('nav .anchor-text');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - sectionHeight * 0.25) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
