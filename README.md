@@ -1,0 +1,1 @@
+This page has been created by Javier Fidalgo Saeta in Visual Studio Code, with the help of the HTML+CSS course by James McArthur, and with the web portfolio of Brittany Chiang as a design reference. All texts are written in Inter typography.
