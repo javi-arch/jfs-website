@@ -110,11 +110,11 @@ nav {
 .mail {
     font-size: 0.9rem;
     text-decoration: underline;
-    text-underline-offset: 6px;      /* Distancia entre el texto y la línea */
+    text-underline-offset: 6px;      /* Gap between text and underline */
 }
 
 
-/*Social Links Container*/
+/* Social Links Container */
 
 .social-links-container {
     display: flex;
@@ -136,7 +136,7 @@ nav {
     width: 25px;
     height: 25px;
     vertical-align: middle;
-    fill: currentColor; /* hace que el SVG use el color del enlace */
+    fill: currentColor; /* Makes the SVG use the link color */
 }
 
 
@@ -197,21 +197,21 @@ section h2 {
 }
 
 .anchor-text-secret {
-  /* Elimina el color azul y el subrayado */
+  /* Remove the link color and underline */
   color: inherit;
   text-decoration: none;
   
-  /* MUY IMPORTANTE: Cambia el puntero de "mano" a la flecha normal */
+  /* IMPORTANT: show the text cursor instead of the pointer hand */
   cursor: text;
 }
 
 .anchor-text-secret:hover, 
 .anchor-text-secret:active, 
 .anchor-text-secret:focus {
-  /* Evita que cambie al pasar el ratón o hacer clic */
+  /* Keep the same look on hover, click and focus */
   color: inherit;
   text-decoration: none;
-  outline: none; /* Elimina el borde de enfoque para accesibilidad */
+  outline: none; /* Hide the focus outline so the link stays hidden */
 }
 
 
@@ -419,16 +419,16 @@ footer a:hover i {
         font-weight: 600;
         text-transform: uppercase;
         display: flex;
-        align-items: center; /* Centra la línea verticalmente con el texto */
+        align-items: center; /* Vertically center the line with the text */
         gap: 0.5rem;
     }
 
     .line {
     display: inline-block;
-    height: 1px;          /* Grosor de la línea */
+    height: 1px;          /* Line thickness */
     background-color: var(--letter-color);
-    width: 40px;             /* Longitud cero */
-    opacity: 0.8;           /* Invisible al inicio */
+    width: 40px;             /* Resting length */
+    opacity: 0.8;           /* Slightly dimmed at rest */
     transition: width 0.4s ease, opacity 0.3s ease, margin-right 0.4s ease;
     transition-duration: 200ms;
     }
@@ -438,16 +438,16 @@ footer a:hover i {
     }
 
     nav a:hover .line {
-        height: 1px;          /* Grosor de la línea */
-        width: 120px;          /* La longitud que quieras que alcance */
-        opacity: 1;           /* Se hace visible */
+        height: 1px;          /* Line thickness */
+        width: 120px;          /* Expanded length */
+        opacity: 1;           /* Fully visible */
     }
     
     .anchor-text.active .line {
-        height: 1px;          /* Grosor de la línea */
+        height: 1px;          /* Line thickness */
         background-color: var(--highlight-color);
-        width: 120px;          /* La longitud que quieras que alcance */
-        opacity: 1;           /* Se hace visible */
+        width: 120px;          /* Expanded length */
+        opacity: 1;           /* Fully visible */
     }
 
     .anchor-text.active .text {

@@ -851,7 +851,7 @@
         </p>
     </footer>
     <script>
-        // Objeto con las traducciones
+        // Translations for every data-key, by language
         const translations = {
             es: {
                 aboutTitle: 'Sobre mí',
@@ -1069,10 +1069,10 @@
             }
         };
 
-        // Obtener idioma guardado o usar español por defecto
+        // Use the saved language, or Spanish by default
         let currentLanguage = localStorage.getItem('language') || 'es';
 
-        // Función para cambiar el idioma
+        // Switch language and remember the choice
         function setLanguage(lang) {
             currentLanguage = lang;
             localStorage.setItem('language', lang);
@@ -1081,7 +1081,7 @@
             updateButton();
         }
 
-        // Función para actualizar el contenido
+        // Replace each [data-key] element's content with its translation
         function updateContent() {
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
@@ -1091,23 +1091,23 @@
             });
         }
 
-        // Función para actualizar el botón
+        // The button shows the language you can switch to
         function updateButton() {
             const button = document.getElementById('language-toggle');
             button.textContent = currentLanguage === 'es' ? 'EN' : 'ES';
         }
 
-        // Inicializar
+        // Initialize
         document.documentElement.lang = currentLanguage;
         updateContent();
         updateButton();
 
-        // Evento del botón
+        // Toggle language on click
         document.getElementById('language-toggle').addEventListener('click', () => {
             setLanguage(currentLanguage === 'es' ? 'en' : 'es');
         });
 
-        // Script de navegación con active
+        // Highlight the nav link of the section in view (desktop only)
         if (window.innerWidth > 1024) {
             const sections = document.querySelectorAll('main section');
             const navLinks = document.querySelectorAll('nav .anchor-text');
