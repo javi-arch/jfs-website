@@ -6,8 +6,11 @@
     --accent-background:rgba(45, 212, 191, 0.1);
 }
 
-html {
-    scroll-behavior: smooth;
+/* Smooth scrolling only for visitors who have not asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 * {
@@ -55,18 +58,18 @@ a {
     text-decoration: none
 }
 
-p::selection, 
-h1::selection, 
-h2::selection, 
+p::selection,
+h1::selection,
+h2::selection,
 h3::selection,
-h4::selection, 
-h5::selection, 
+h4::selection,
+h5::selection,
 h6::selection,
 img::selection,
 button::selection {
     background: var(--accent-color);
     color: var(--background-color);
- }
+}
 
 header,
 main,
@@ -83,24 +86,25 @@ header {
 }
 
 header h1,
-header h4 {
-    color: var(--highlight-color)
+header .subtitle {
+    color: var(--highlight-color);
 }
 
 header h1 {
     font-size: 3.2rem;
     font-weight: 600;
-    transition: transform 200ms;
+    transition-duration: 200ms;
 }
 
-header h1:hover {
+header h1:hover,
+header a:focus-visible h1 {
     color: var(--accent-color);
 }
 
-
-header h4 {
+header .subtitle {
     font-size: 1.1rem;
     font-weight: 400;
+    line-height: normal;
 }
 
 nav {
@@ -108,9 +112,18 @@ nav {
 }
 
 .mail {
+    align-self: flex-start;          /* Keep the link as wide as its text */
+    color: inherit;
     font-size: 0.9rem;
+    line-height: 1.5rem;
     text-decoration: underline;
     text-underline-offset: 6px;      /* Gap between text and underline */
+    transition-duration: 200ms;
+}
+
+.mail:hover,
+.mail:focus-visible {
+    color: var(--highlight-color);
 }
 
 
@@ -128,7 +141,8 @@ nav {
     transition-duration: 200ms;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus-visible {
     color: var(--highlight-color);
 }
 
@@ -177,7 +191,6 @@ section h2 {
     inset: 0;
     background: var(--background-color);
     opacity: 0.85;
-   
 }
 
 .about-contents {
@@ -192,26 +205,28 @@ section h2 {
     transition-duration: 200ms;
 }
 
-.anchor-text:hover {
+.anchor-text:hover,
+.anchor-text:focus-visible,
+a:focus-visible > .card-header {
     color: var(--accent-color);
 }
 
 .anchor-text-secret {
-  /* Remove the link color and underline */
-  color: inherit;
-  text-decoration: none;
-  
-  /* IMPORTANT: show the text cursor instead of the pointer hand */
-  cursor: text;
+    /* Remove the link color and underline */
+    color: inherit;
+    text-decoration: none;
+
+    /* IMPORTANT: show the text cursor instead of the pointer hand */
+    cursor: text;
 }
 
-.anchor-text-secret:hover, 
-.anchor-text-secret:active, 
+.anchor-text-secret:hover,
+.anchor-text-secret:active,
 .anchor-text-secret:focus {
-  /* Keep the same look on hover, click and focus */
-  color: inherit;
-  text-decoration: none;
-  outline: none; /* Hide the focus outline so the link stays hidden */
+    /* Keep the same look on hover, click and focus */
+    color: inherit;
+    text-decoration: none;
+    outline: none; /* Hide the focus outline so the link stays hidden */
 }
 
 
@@ -259,7 +274,7 @@ section h2 {
 }
 
 .card p.tenure {
-    opacity: 0.6;
+    opacity: 0.8;                    /* Dimmed, but still readable (contrast 4.9:1) */
     text-transform: uppercase;
     font-size: 0.8rem;
 }
@@ -279,9 +294,8 @@ section h2 {
     transform: translateY(-0.3rem);
 }
 
-.card-link i {   
+.card-link i {
     color: var(--letter-color);
-    transition-duration: 200ms;
     font-size: 0.8rem;
     padding-right: 1.3rem;
     transition: transform 200ms;
@@ -404,7 +418,7 @@ footer a:hover i {
         margin-right: auto;
         gap: 16rem;
     }
-    
+
     nav {
         display: flex;
         flex-direction: column;
@@ -413,7 +427,7 @@ footer a:hover i {
         padding-top: 1rem;
         margin-bottom: 1.5rem;
     }
-    
+
     nav a {
         font-size: 0.9rem;
         font-weight: 600;
@@ -424,38 +438,45 @@ footer a:hover i {
     }
 
     .line {
-    display: inline-block;
-    height: 1px;          /* Line thickness */
-    background-color: var(--letter-color);
-    width: 40px;             /* Resting length */
-    opacity: 0.8;           /* Slightly dimmed at rest */
-    transition: width 0.4s ease, opacity 0.3s ease, margin-right 0.4s ease;
-    transition-duration: 200ms;
+        display: inline-block;
+        height: 1px;            /* Line thickness */
+        background-color: var(--letter-color);
+        width: 40px;            /* Resting length */
+        opacity: 0.8;           /* Slightly dimmed at rest */
+        transition: width 200ms ease, opacity 200ms ease;
     }
 
     .text {
-        color: var(--letter-color)
+        color: var(--letter-color);
     }
 
-    nav a:hover .line {
-        height: 1px;          /* Line thickness */
-        width: 120px;          /* Expanded length */
-        opacity: 1;           /* Fully visible */
+    nav a:hover .line,
+    nav a:focus-visible .line {
+        width: 120px;           /* Expanded length */
+        opacity: 1;             /* Fully visible */
     }
-    
+
     .anchor-text.active .line {
-        height: 1px;          /* Line thickness */
         background-color: var(--highlight-color);
-        width: 120px;          /* Expanded length */
-        opacity: 1;           /* Fully visible */
+        width: 120px;           /* Expanded length */
+        opacity: 1;             /* Fully visible */
     }
 
     .anchor-text.active .text {
-        color: var(--highlight-color)
+        color: var(--highlight-color);
     }
 
+    /* The nav replaces the section titles on desktop: hide them visually
+       but keep them for screen readers (display: none would remove them) */
     .sticky-header {
-        display: none;
+        position: absolute;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
     }
 
     footer {
