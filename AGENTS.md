@@ -27,6 +27,13 @@ Personal portfolio of Javier Fidalgo Saeta (architect / BIM specialist), publish
 - Prefixes: `img-` for project images, `pdf-` for project documents, `cert-` for certificates.
 - In visible text, use each brand's official spelling (`pyRevit`, `Revit`, `Rhino`, `Grasshopper`).
 
+## Privacy and search engines
+
+- Before publishing a document, check it for personal data beyond the name and the public email: date or place of birth, ID numbers, handwritten signatures, home address, phone. Redact it and flatten the page to an image so the hidden data cannot be recovered.
+- The GitHub repo is public: deleting a file from the site does not remove it from the git history. Sensitive files must also be purged from the history.
+- Every PDF needs a descriptive `Title` in its metadata. Google uses it as the search result title; without it, image-only PDFs get whatever text Google OCRs from the page.
+- Files that must stay out of search results go in `robots.txt`. Never list a file that was already indexed and has since been deleted: Google has to crawl its 404 to drop it.
+
 ## Translations (ES / EN)
 
 - Spanish is the default. The `#language-toggle` button switches to English and stores the choice in `localStorage`.
