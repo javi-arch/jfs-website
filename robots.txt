@@ -1,0 +1,5 @@
+# Keep the personal photo linked from "About" out of search results.
+# Do not block a file that was already indexed and has since been removed:
+# Google needs to crawl its 404 to drop it.
+User-agent: *
+Disallow: /public/img-loved-ones.jpg
