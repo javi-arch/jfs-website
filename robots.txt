@@ -3,3 +3,5 @@
 # Google needs to crawl its 404 to drop it.
 User-agent: *
 Disallow: /public/img-loved-ones.jpg
+
+Sitemap: https://javierfidalgosaeta.com/sitemap.xml

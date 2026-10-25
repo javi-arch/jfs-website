@@ -13,7 +13,8 @@ Personal portfolio of Javier Fidalgo Saeta (architect / BIM specialist), publish
 - Hand-written HTML + CSS: no build step, no frameworks, no npm dependencies.
 - `index.html` holds all the content plus inline JavaScript; `styles.css` holds the styles.
 - Assets (images and PDFs) live in `public/`.
-- Icons: Font Awesome via CDN. Font: Inter from Google Fonts.
+- Icons: the few Font Awesome Free icons in use are embedded in `styles.css` as CSS masks (`fa-*` classes, no CDN). To add one, copy its SVG from Font Awesome Free into a new `.fa-<name>` rule.
+- Font: Inter from Google Fonts.
 
 ## Deployment
 
@@ -33,6 +34,7 @@ Personal portfolio of Javier Fidalgo Saeta (architect / BIM specialist), publish
 - The GitHub repo is public: deleting a file from the site does not remove it from the git history. Sensitive files must also be purged from the history.
 - Every PDF needs a descriptive `Title` in its metadata. Google uses it as the search result title; without it, image-only PDFs get whatever text Google OCRs from the page.
 - Files that must stay out of search results go in `robots.txt`. Never list a file that was already indexed and has since been deleted: Google has to crawl its 404 to drop it.
+- `sitemap.xml` lists the home page and every PDF. When you add, remove or change one of them, update the sitemap and its `<lastmod>` date, so Google knows to recrawl it.
 
 ## Translations (ES / EN)
 
