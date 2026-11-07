@@ -5,13 +5,13 @@ Personal portfolio of Javier Fidalgo Saeta (architect / BIM specialist), publish
 ## Language
 
 - Work in English: code, comments, identifiers, class names, `data-key` names, commit messages and docs (README, AGENTS.md).
-- The only Spanish allowed is user-facing text that visitors see when the site is in ES: the Spanish copy in the HTML, `translations.es`, and image `alt` texts.
+- The only Spanish allowed is user-facing text on the Spanish page: the copy and the image `alt` texts in `index.html`.
 - Name new asset files in English. Some existing files in `public/` have Spanish names (e.g. `pdf-campos-aliseos-03.pdf`); leave them as they are, since renaming breaks public links.
 
 ## Stack
 
 - Hand-written HTML + CSS: no build step, no frameworks, no npm dependencies.
-- `index.html` holds all the content plus inline JavaScript; `styles.css` holds the styles.
+- `index.html` (Spanish, served at `/`) and `en/index.html` (English, served at `/en/`) hold the content. `styles.css` holds the styles and `script.js` the nav highlight, both shared by the two pages.
 - Assets (images and PDFs) live in `public/`.
 - Icons: the few Font Awesome Free icons in use are embedded in `styles.css` as CSS masks (`fa-*` classes, no CDN). To add one, copy its SVG from Font Awesome Free into a new `.fa-<name>` rule.
 - Font: Inter from Google Fonts.
@@ -35,18 +35,20 @@ Personal portfolio of Javier Fidalgo Saeta (architect / BIM specialist), publish
 - The GitHub repo is public: deleting a file from the site does not remove it from the git history. Sensitive files must also be purged from the history.
 - Every PDF needs a descriptive `Title` in its metadata. Google uses it as the search result title; without it, image-only PDFs get whatever text Google OCRs from the page.
 - Files that must stay out of search results go in `robots.txt`. Never list a file that was already indexed and has since been deleted: Google has to crawl its 404 to drop it.
-- `sitemap.xml` lists the home page and every PDF. When you add, remove or change one of them, update the sitemap and its `<lastmod>` date, so Google knows to recrawl it.
+- `sitemap.xml` lists both pages and every PDF. When you add, remove or change one of them, update the sitemap and its `<lastmod>` date, so Google knows to recrawl it.
 
 ## Translations (ES / EN)
 
-- Spanish is the default. The `#language-toggle` button switches to English and stores the choice in `localStorage`.
-- Every translatable element has a `data-key` attribute, and that key must exist in both `translations.es` and `translations.en` (the object at the end of `index.html`).
-- Spanish copy is duplicated: once in the HTML and once in `translations.es`. **When editing text, update both**, and update the English version too.
+- Each language is a complete static page, so search engines index both: Spanish in `index.html` (`/`, the default) and English in `en/index.html` (`/en/`).
+- Both pages share the same structure. **Every change to content or markup goes into both files**, with the text translated, `alt` texts included.
+- In `en/index.html`, paths to shared files go up one level: `../styles.css`, `../script.js`, `../public/...`.
+- The `.language-toggle` link of each page points to the other one. Both heads carry the same `hreflang` alternate links; each has its own `canonical`, `og:url`, `og:locale`, title and description.
 
 ## Check before committing
 
-Verify that every `public/` path in the HTML matches an existing file exactly:
+Verify that every `public/` path in both pages matches an existing file exactly, and that both pages still have the same structure:
 
 ```bash
-for f in $(grep -o 'public/[A-Za-z0-9._-]*' index.html | sort -u); do git ls-files --error-unmatch "$f" >/dev/null 2>&1 || echo "MISSING: $f"; done
+for f in $(grep -oh 'public/[A-Za-z0-9._-]*' index.html en/index.html | sort -u); do git ls-files --error-unmatch "$f" >/dev/null 2>&1 || echo "MISSING: $f"; done
+diff <(grep -o '<[a-z0-9]*' index.html) <(grep -o '<[a-z0-9]*' en/index.html) && echo "Same structure"
 ```
