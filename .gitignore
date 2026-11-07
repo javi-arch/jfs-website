@@ -1,0 +1,11 @@
+# Editor settings
+.idea/
+.vscode/
+
+# Operating system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Office lock files (left behind while a document is open)
+~$*
