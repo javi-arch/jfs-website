@@ -4,6 +4,7 @@
     --accent-color: #5eead4;
     --highlight-color: #e2e8f0;
     --accent-background:rgba(45, 212, 191, 0.1);
+    --divider-color: rgba(148, 163, 184, 0.2);
 }
 
 /* Smooth scrolling only for visitors who have not asked for reduced motion */
@@ -155,9 +156,10 @@ nav {
 
 
 main {
+    --section-gap: 10rem;
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: var(--section-gap);
 }
 
 section {
@@ -165,6 +167,21 @@ section {
     flex-direction: column;
     gap: 2.5rem;
     scroll-margin-top: 6rem;
+}
+
+/* Subtle divider halfway through the gap between two sections */
+section + section {
+    position: relative;
+}
+
+section + section::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--section-gap) / -2);
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--divider-color);
 }
 
 section h2 {
@@ -469,7 +486,7 @@ footer a:hover i {
         width: 100%;
         padding-top: 6rem;
         margin-right: auto;
-        gap: 16rem;
+        --section-gap: 16rem;
     }
 
     nav {
